@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/Springworks/node-scale-reader/issues"
   },
-  "homepage": "https://github.com/Springworks/node-scale-reader"
+  "homepage": "https://github.com/Springworks/node-scale-reader",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-eslint": "^4.1.3",
+    "eslint": "1.7.3",
+    "eslint-config-springworks": "3.2.0",
+    "eslint-plugin-mocha": "1.0.0"
+  }
 }
