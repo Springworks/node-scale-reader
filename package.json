@@ -1,0 +1,24 @@
+{
+  "name": "scale-reader",
+  "version": "0.0.1",
+  "description": "Application that reads value off a scale from a local file stream",
+  "main": "lib/reader.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Springworks/node-scale-reader.git"
+  },
+  "keywords": [
+    "usb",
+    "scale",
+    "iot"
+  ],
+  "author": "Kristofer Sommestad <kristofer@sommestad.com> (http://sommestad.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Springworks/node-scale-reader/issues"
+  },
+  "homepage": "https://github.com/Springworks/node-scale-reader"
+}
