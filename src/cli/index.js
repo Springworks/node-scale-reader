@@ -1,17 +1,23 @@
-const program = require('commander');
-const main = require('../index');
+import program from 'commander';
+import main from '../index';
 
-exports.run = function(process) {
-  program
-      .option('-F, --filename <path to file>', 'Path to file to read weight from')
-      .option('-T, --target-url <url to PATCH endpoint>', 'Target URL')
-      .parse(process.argv);
+const api = {
 
-  console.log('');
-  console.log('Reading weight from %s, sending changes to %s', program.filename, program.targetUrl);
-  console.log('');
+  run(process) {
+    program
+        .option('-F, --filename <path to file>', 'Path to file to read weight from')
+        .option('-T, --target-url <url to PATCH endpoint>', 'Target URL')
+        .parse(process.argv);
 
-  main.run(program.filename, program.targetUrl);
+    console.log('');
+    console.log('Reading weight from %s, sending changes to %s', program.filename, program.targetUrl);
+    console.log('');
 
-  console.log('Waiting...');
+    main.run(program.filename, program.targetUrl);
+
+    console.log('Waiting...');
+  },
+
 };
+
+export default api;
