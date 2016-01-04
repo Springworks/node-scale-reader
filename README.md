@@ -30,7 +30,7 @@ Data transmission is a `PATCH` to `--target-url` with body:
 ```json
 {
   "grams": 1025,
-  "timestamp": 2015-12-08T12:35:43.771Z"
+  "timestamp": "2015-12-08T12:35:43.771Z"
 }
 ```
 
