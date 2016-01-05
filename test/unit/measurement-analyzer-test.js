@@ -20,36 +20,7 @@ describe(__filename, function() {
           measurements.should.eql([grams]);
         });
 
-        it('should not consider measurements stable', () => {
-          analyzer.addMeasurement(grams);
-          analyzer.isStabilized().should.eql(false);
-        });
-
-      });
-
-      describe('adding equal measurement 3 times (min required count) to 1 different measurement', () => {
-        const initial_grams = 2000;
-        const grams = 1000;
-
-        beforeEach(() => {
-          analyzer.addMeasurement(initial_grams);
-        });
-
-        it('should return array of recent measurements', () => {
-          analyzer.addMeasurement(grams);
-          analyzer.addMeasurement(grams);
-          const measurements = analyzer.addMeasurement(grams);
-          measurements.should.eql([
-            initial_grams,
-            grams,
-            grams,
-            grams,
-          ]);
-        });
-
         it('should consider measurements stable', () => {
-          analyzer.addMeasurement(grams);
-          analyzer.addMeasurement(grams);
           analyzer.addMeasurement(grams);
           analyzer.isStabilized().should.eql(true);
         });
