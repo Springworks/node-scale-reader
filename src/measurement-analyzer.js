@@ -5,7 +5,7 @@ const api = {
     const recent_measurements = [];
     return {
       isStabilized() {
-        const MINIMUM_EQUAL_VALUES_FOR_STABILITY = 3;
+        const MINIMUM_EQUAL_VALUES_FOR_STABILITY = 1;
         const tail = takeRight(recent_measurements, MINIMUM_EQUAL_VALUES_FOR_STABILITY);
         if (tail.length < MINIMUM_EQUAL_VALUES_FOR_STABILITY) {
           return false;
