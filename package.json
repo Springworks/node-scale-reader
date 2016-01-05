@@ -1,6 +1,6 @@
 {
   "name": "scale-reader",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Application that reads value off a scale from a local file stream",
   "main": "./lib/index.js",
   "bin": {
