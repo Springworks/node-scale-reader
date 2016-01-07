@@ -18,7 +18,7 @@ const api = {
         console.log('Responding to read weight: %d g', grams);
 
         measurement_analyzer.addMeasurement(grams);
-        if (measurement_analyzer.isStabilized()) {
+        if (measurement_analyzer.isLatestValueDifferent()) {
           return weight_transmitter.transmitWeight(grams)
               .then(() => {
                 console.log('Transmitted weight: %d g', grams);

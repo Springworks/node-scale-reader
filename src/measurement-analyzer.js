@@ -4,29 +4,17 @@ const api = {
   create() {
     const recent_measurements = [];
     return {
-      isStabilized() {
-        const MINIMUM_EQUAL_VALUES_FOR_STABILITY = 1;
-        const tail = takeRight(recent_measurements, MINIMUM_EQUAL_VALUES_FOR_STABILITY);
-        if (tail.length < MINIMUM_EQUAL_VALUES_FOR_STABILITY) {
-          return false;
-        }
 
-        let previous = null;
-        for (let i = 0; i < tail.length; i++) {
-          const value = tail[i];
-          if (previous !== null && value !== previous) {
-            return false;
-          }
-          previous = value;
-        }
-
-        return true;
+      isLatestValueDifferent() {
+        const tail = takeRight(recent_measurements, 2);
+        return tail.length === 1 || tail[0] !== tail[1];
       },
 
       addMeasurement(measurement) {
         recent_measurements.push(measurement);
         return recent_measurements;
       },
+
     };
   },
 };

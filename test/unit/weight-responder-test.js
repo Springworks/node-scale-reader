@@ -2,7 +2,7 @@ import weight_responder from '../../src/weight-responder';
 import analyzer from '../../src/measurement-analyzer';
 import weight_transmitter from '../../src/transmission/weight-transmitter';
 
-describe(__filename, function() {
+describe(__filename, () => {
   let sinon_sandbox;
 
   beforeEach(() => {
@@ -39,10 +39,10 @@ describe(__filename, function() {
         const measurement_str = '1234.5 g';
         const grams = 1234;
 
-        describe('when measurements are stabilized', () => {
+        describe('when measurement is different', () => {
 
           beforeEach(() => {
-            sinon_sandbox.stub(measurement_analyzer, 'isStabilized').returns(true);
+            sinon_sandbox.stub(measurement_analyzer, 'isLatestValueDifferent').returns(true);
           });
 
           it('should add measurement in grams, rounded to int', () => {
