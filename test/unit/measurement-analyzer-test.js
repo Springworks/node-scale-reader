@@ -1,7 +1,6 @@
 import measurement_analyzer from '../../src/measurement-analyzer';
 
-
-describe(__filename, function() {
+describe(__filename, () => {
 
   describe('with created analyzer', () => {
     let analyzer;
@@ -10,24 +9,47 @@ describe(__filename, function() {
       analyzer = measurement_analyzer.create();
     });
 
-    describe('having no added measurements', () => {
+    describe('isLatestValueDifferent', () => {
+      const grams = 1000;
 
-      describe('adding one measurement', () => {
-        const grams = 1000;
+      describe('having added one previous measurement', () => {
 
-        it('should return array of recent measurements', () => {
-          const measurements = analyzer.addMeasurement(grams);
-          measurements.should.eql([grams]);
+        beforeEach(() => {
+          analyzer.addMeasurement(grams);
         });
 
-        it('should consider measurements stable', () => {
-          analyzer.addMeasurement(grams);
-          analyzer.isStabilized().should.eql(true);
+        it('should return true', () => {
+          analyzer.isLatestValueDifferent().should.eql(true);
+        });
+
+        describe('adding one more of the same value', () => {
+
+          beforeEach(() => {
+            analyzer.addMeasurement(grams);
+          });
+
+          it('should return false', () => {
+            analyzer.isLatestValueDifferent().should.eql(false);
+          });
+
+        });
+
+        describe('adding another new value', () => {
+
+          beforeEach(() => {
+            analyzer.addMeasurement(grams + 1);
+          });
+
+          it('should return true', () => {
+            analyzer.isLatestValueDifferent().should.eql(true);
+          });
+
         });
 
       });
 
     });
+
 
   });
 
