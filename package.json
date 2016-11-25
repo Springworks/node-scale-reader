@@ -41,7 +41,7 @@
     "eslint-plugin-mocha": "1.0.0",
     "eslint-plugin-should-promised": "1.0.5",
     "istanbul": "0.4.1",
-    "mocha": "2.3.4"
+    "mocha": "3.2.0"
   },
   "dependencies": {
     "always-tail": "0.2.0",
