@@ -37,7 +37,7 @@
     "babel-plugin-transform-strict-mode": "6.3.13",
     "babel-preset-es2015": "6.3.13",
     "eslint": "1.7.3",
-    "eslint-config-springworks": "3.2.0",
+    "eslint-config-springworks": "7.0.7",
     "eslint-plugin-mocha": "1.0.0",
     "eslint-plugin-should-promised": "1.0.5",
     "istanbul": "0.4.1",
