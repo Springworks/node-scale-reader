@@ -1,6 +1,6 @@
 import measurement_analyzer from '../../src/measurement-analyzer';
 
-describe(__filename, () => {
+describe('test/unit/measurement-analyzer-test.js', () => {
 
   describe('with created analyzer', () => {
     let analyzer;

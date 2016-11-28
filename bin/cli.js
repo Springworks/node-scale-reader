@@ -2,5 +2,5 @@
 
 require('babel-polyfill');
 
-var cli = require('../lib/cli');
+const cli = require('../lib/cli');
 cli.default.run(process);

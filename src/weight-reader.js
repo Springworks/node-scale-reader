@@ -22,10 +22,10 @@ const api = {
 
   create(file_path, weight_responder) {
     const tail = internals.provideTail(file_path);
-    tail.on('line', function(data) {
+    tail.on('line', data => {
       internals.handleUpdate(weight_responder, data);
     });
-    tail.on('error', function(data) {
+    tail.on('error', data => {
       console.error('weight-reader failed:', data);
     });
 

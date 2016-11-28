@@ -2,7 +2,7 @@ import weight_responder from '../../src/weight-responder';
 import analyzer from '../../src/measurement-analyzer';
 import weight_transmitter from '../../src/transmission/weight-transmitter';
 
-describe(__filename, () => {
+describe('test/unit/weight-responder-test.js', () => {
   let sinon_sandbox;
 
   beforeEach(() => {
@@ -23,7 +23,7 @@ describe(__filename, () => {
       sinon_sandbox.spy(measurement_analyzer, 'addMeasurement');
     });
 
-    beforeEach(function mockWeightTransmission() {
+    beforeEach(() => {
       const http_transmitter = { transmit: () => Promise.resolve() };
       transmitter = weight_transmitter.create(http_transmitter);
       sinon_sandbox.spy(transmitter, 'transmitWeight');
