@@ -1,7 +1,7 @@
 import http_transmitter from '../../../src/transmission/http-transmitter';
 
 
-describe(__filename, function() {
+describe('test/unit/transmission/http-transmitter-test.js', () => {
   let sinon_sandbox;
 
   beforeEach(() => {
@@ -51,7 +51,7 @@ describe(__filename, function() {
           call_args[0].should.eql({
             method: mock_config.method,
             url: mock_config.target_url,
-            json: payload
+            json: payload,
           });
         });
       });

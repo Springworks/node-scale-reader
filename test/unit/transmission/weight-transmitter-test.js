@@ -1,6 +1,6 @@
 import weight_transmitter from '../../../src/transmission/weight-transmitter';
 
-describe(__filename, function() {
+describe('test/unit/transmission/weight-transmitter-test.js', () => {
   let sinon_sandbox;
 
   beforeEach(() => {
@@ -22,9 +22,9 @@ describe(__filename, function() {
 
         beforeEach(() => {
           http_transmitter = {
-            transmit: function() {
+            transmit() {
               return Promise.resolve();
-            }
+            },
           };
           sinon_sandbox.spy(http_transmitter, 'transmit');
         });

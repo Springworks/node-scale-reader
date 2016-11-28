@@ -1,6 +1,6 @@
 import weight_reader from '../../src/weight-reader';
 
-describe('test/unit/weight-reader-test.js', function() {
+describe('test/unit/weight-reader-test.js', () => {
   let sinon_sandbox;
 
   beforeEach(() => {
