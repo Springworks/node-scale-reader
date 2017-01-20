@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "always-tail": "0.2.0",
-    "babel-polyfill": "6.20.0",
+    "babel-polyfill": "6.22.0",
     "commander": "2.9.0",
     "lodash.takeright": "4.1.1",
     "request": "2.79.0",
