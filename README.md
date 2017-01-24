@@ -2,6 +2,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Springworks/node-scale-reader.svg)](https://greenkeeper.io/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Springworks/node-scale-reader.svg)](https://greenkeeper.io/)
+
 Node application that reads a file stream, parses its input as a weight measurement and sends it somewhere.
 
 **Probably only useful in combination with:**
